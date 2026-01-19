@@ -3,12 +3,10 @@ add_theme_support('menus');
 function register_my_menu()
 {
 	$locations = array(
-		'header-top' => __('Menu top', 'canhcamtheme'),
 		'header-menu' => __('Menu chính', 'canhcamtheme'),
-		'footer-1' => __('Footer 1', 'canhcamtheme'),
-		'footer-2' => __('Footer 2', 'canhcamtheme'),
-		'footer-3' => __('Footer 3', 'canhcamtheme'),
-		'footer-4' => __('Footer 4', 'canhcamtheme'),
+		'footer-menu-1' => __('Footer Menu 1', 'canhcamtheme'),
+		'footer-menu-2' => __('Footer Menu 2', 'canhcamtheme'),
+		'footer-policy-menu' => __('Footer Policy Menu', 'canhcamtheme'),
 	);
 	register_nav_menus($locations);
 }

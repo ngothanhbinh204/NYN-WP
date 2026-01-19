@@ -7,6 +7,7 @@ require get_template_directory() . '/inc/function-field.php';
 require get_template_directory() . '/inc/function-pagination.php';
 require get_template_directory() . '/inc/function-custom.php';
 require get_template_directory() . '/inc/function-woo.php';
+require get_template_directory() . '/inc/walker-product-menu.php';
 
 // Woocommerce
 require get_template_directory() . '/inc/woocommerce/func-setup.php';
