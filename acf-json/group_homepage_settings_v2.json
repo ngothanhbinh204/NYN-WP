@@ -1,10 +1,10 @@
 {
-    "key": "group_homepage_settings",
-    "title": "Homepage Settings",
+    "key": "group_homepage_settings_v2",
+    "title": "Page : Trang Chủ",
     "fields": [
         {
             "key": "tab_home_slider",
-            "label": "1. Hero Slider",
+            "label": "1. Banner Chính",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -22,28 +22,29 @@
         },
         {
             "key": "field_home_1_slider",
-            "label": "Hero Slider",
+            "label": "Danh sách Slide",
             "name": "home_1_slider",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "button_label": "Thêm Slide",
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "rows_per_page": 20,
             "collapsed": "",
+            "button_label": "Thêm Slide",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_h1_type",
-                    "label": "Media Type",
+                    "label": "Loại Media",
                     "name": "type",
                     "aria-label": "",
                     "type": "select",
@@ -57,7 +58,7 @@
                     },
                     "choices": {
                         "video": "Video",
-                        "image": "Image"
+                        "image": "Hình ảnh"
                     },
                     "default_value": "video",
                     "multiple": 0,
@@ -101,7 +102,7 @@
                 },
                 {
                     "key": "field_h1_image",
-                    "label": "Image Banner",
+                    "label": "Hình ảnh Banner",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
@@ -135,7 +136,7 @@
                 },
                 {
                     "key": "field_h1_title_1",
-                    "label": "Title 1 (NYN)",
+                    "label": "Tiêu đề 1 (VD: NYN)",
                     "name": "title_1",
                     "aria-label": "",
                     "type": "text",
@@ -148,15 +149,15 @@
                         "id": ""
                     },
                     "default_value": "NYN",
+                    "placeholder": "Nhập tiêu đề lớn dòng 1",
                     "maxlength": "",
-                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_1_slider"
                 },
                 {
                     "key": "field_h1_title_2",
-                    "label": "Title 2 (notice your needs)",
+                    "label": "Tiêu đề 2 (VD: notice your needs)",
                     "name": "title_2",
                     "aria-label": "",
                     "type": "text",
@@ -169,15 +170,15 @@
                         "id": ""
                     },
                     "default_value": "notice your needs",
+                    "placeholder": "Nhập tiêu đề lớn dòng 2",
                     "maxlength": "",
-                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_1_slider"
                 },
                 {
                     "key": "field_h1_sub_title",
-                    "label": "Sub Title",
+                    "label": "Tiêu đề phụ",
                     "name": "sub_title",
                     "aria-label": "",
                     "type": "text",
@@ -190,15 +191,15 @@
                         "id": ""
                     },
                     "default_value": "Lifestyle. Selfcare. Presence.",
+                    "placeholder": "Nhập tiêu đề nhỏ",
                     "maxlength": "",
-                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_1_slider"
                 },
                 {
                     "key": "field_h1_button",
-                    "label": "Button",
+                    "label": "Nút bấm",
                     "name": "button",
                     "aria-label": "",
                     "type": "link",
@@ -217,7 +218,7 @@
         },
         {
             "key": "tab_home_values",
-            "label": "2. Core Values",
+            "label": "2. Giá trị cốt lõi",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -235,7 +236,7 @@
         },
         {
             "key": "field_home_2_items",
-            "label": "Values List",
+            "label": "Danh sách giá trị",
             "name": "home_2_items",
             "aria-label": "",
             "type": "repeater",
@@ -249,9 +250,9 @@
             },
             "layout": "table",
             "max": 4,
+            "button_label": "Thêm giá trị",
             "min": 0,
             "rows_per_page": 20,
-            "button_label": "Add Row",
             "collapsed": "",
             "sub_fields": [
                 {
@@ -282,7 +283,7 @@
                 },
                 {
                     "key": "field_h2_item_title",
-                    "label": "Title",
+                    "label": "Tiêu đề",
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
@@ -294,9 +295,9 @@
                         "class": "",
                         "id": ""
                     },
+                    "placeholder": "Nhập tiêu đề giá trị",
                     "default_value": "",
                     "maxlength": "",
-                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_2_items"
@@ -305,7 +306,7 @@
         },
         {
             "key": "field_home_2_main_title",
-            "label": "Main Title",
+            "label": "Tiêu đề chính",
             "name": "home_2_main_title",
             "aria-label": "",
             "type": "text",
@@ -318,35 +319,34 @@
                 "id": ""
             },
             "default_value": "Lối sống, được chọn lọc.",
+            "placeholder": "Nhập tiêu đề chính cho section",
             "maxlength": "",
-            "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
             "key": "field_home_2_main_desc",
-            "label": "Main Description",
+            "label": "Mô tả chính",
             "name": "home_2_main_desc",
             "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
+            "required": false,
+            "conditional_logic": false,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
             "media_upload": 1,
+            "toolbar": "basic",
+            "tabs": "all",
+            "default_value": "",
             "delay": 0
         },
         {
             "key": "tab_home_highlight",
-            "label": "3. Highlight Sections",
+            "label": "3. Mục nổi bật",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -364,7 +364,7 @@
         },
         {
             "key": "field_home_3_main_title",
-            "label": "Section Title",
+            "label": "Tiêu đề Section",
             "name": "home_3_main_title",
             "aria-label": "",
             "type": "text",
@@ -384,28 +384,29 @@
         },
         {
             "key": "field_home_3_sections",
-            "label": "Highlight Rows",
+            "label": "Danh sách mục nổi bật",
             "name": "home_3_sections",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "rows_per_page": 20,
-            "button_label": "Add Row",
             "collapsed": "",
+            "button_label": "Thêm mục",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_h3_image",
-                    "label": "Main Image",
+                    "label": "Hình ảnh chính",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
@@ -431,7 +432,7 @@
                 },
                 {
                     "key": "field_h3_title",
-                    "label": "Title",
+                    "label": "Tiêu đề",
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
@@ -443,16 +444,16 @@
                         "class": "",
                         "id": ""
                     },
+                    "placeholder": "Nhập tiêu đề",
                     "default_value": "",
                     "maxlength": "",
-                    "placeholder": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_3_sections"
                 },
                 {
                     "key": "field_h3_desc",
-                    "label": "Description",
+                    "label": "Mô tả",
                     "name": "description",
                     "aria-label": "",
                     "type": "textarea",
@@ -464,42 +465,16 @@
                         "class": "",
                         "id": ""
                     },
+                    "rows": 3,
+                    "placeholder": "Nhập mô tả ngắn",
                     "default_value": "",
                     "new_lines": "",
                     "maxlength": "",
-                    "placeholder": "",
-                    "rows": "",
-                    "parent_repeater": "field_home_3_sections"
-                },
-                {
-                    "key": "field_h3_product_img",
-                    "label": "Product Image",
-                    "name": "product_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
                     "parent_repeater": "field_home_3_sections"
                 },
                 {
                     "key": "field_h3_button",
-                    "label": "Button Link",
+                    "label": "Tùy chọn Nút bấm",
                     "name": "button",
                     "aria-label": "",
                     "type": "link",
@@ -518,7 +493,7 @@
         },
         {
             "key": "tab_home_testimonials",
-            "label": "4. Testimonials",
+            "label": "4. Cảm nhận khách hàng",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -536,7 +511,7 @@
         },
         {
             "key": "field_home_4_title",
-            "label": "Title",
+            "label": "Tiêu đề",
             "name": "home_4_title",
             "aria-label": "",
             "type": "text",
@@ -556,101 +531,51 @@
         },
         {
             "key": "field_home_4_testimonials",
-            "label": "Testimonials",
+            "label": "Danh sách cảm nhận",
             "name": "home_4_testimonials",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
-            "required": false,
-            "conditional_logic": false,
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "rows_per_page": 20,
-            "button_label": "Add Row",
             "collapsed": "",
+            "button_label": "Thêm cảm nhận",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_h4_icon",
-                    "label": "Icon",
-                    "name": "icon",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "parent_repeater": "field_home_4_testimonials"
-                },
-                {
                     "key": "field_h4_content",
-                    "label": "Content",
+                    "label": "Nội dung",
                     "name": "content",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "new_lines": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "rows": "",
-                    "parent_repeater": "field_home_4_testimonials"
-                },
-                {
-                    "key": "field_h4_avatar",
-                    "label": "Avatar",
-                    "name": "avatar",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_home_4_testimonials"
                 },
                 {
                     "key": "field_h4_info",
-                    "label": "User Info",
+                    "label": "Thông tin người dùng",
                     "name": "info",
                     "aria-label": "",
                     "type": "text",
@@ -662,9 +587,33 @@
                         "class": "",
                         "id": ""
                     },
+                    "placeholder": "VD: Mai, TP. Hồ Chí Minh",
                     "default_value": "",
                     "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_home_4_testimonials"
+                },
+                {
+                    "key": "field_696eed3dde4c1",
+                    "label": "Số sao",
+                    "name": "star",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "min": 1,
+                    "max": 5,
+                    "allow_in_bindings": 0,
                     "placeholder": "",
+                    "step": "",
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_home_4_testimonials"
@@ -673,7 +622,7 @@
         },
         {
             "key": "tab_home_products",
-            "label": "5. Selected Products",
+            "label": "5. Sản phẩm chọn lọc",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -691,7 +640,7 @@
         },
         {
             "key": "field_home_5_title",
-            "label": "Title",
+            "label": "Tiêu đề",
             "name": "home_5_title",
             "aria-label": "",
             "type": "text",
@@ -711,7 +660,7 @@
         },
         {
             "key": "field_home_5_products",
-            "label": "Products Selection",
+            "label": "Chọn sản phẩm hiển thị",
             "name": "home_5_products",
             "aria-label": "",
             "type": "relationship",
@@ -726,11 +675,11 @@
             "post_type": [
                 "product"
             ],
+            "return_format": "object",
             "filters": [
                 "search",
                 "taxonomy"
             ],
-            "return_format": "object",
             "taxonomy": [],
             "min": 0,
             "max": 0,
@@ -739,7 +688,7 @@
         },
         {
             "key": "field_home_5_bottom_text",
-            "label": "Bottom Text",
+            "label": "Văn bản dưới cùng",
             "name": "home_5_bottom_text",
             "aria-label": "",
             "type": "text",
@@ -758,8 +707,8 @@
             "append": ""
         },
         {
-            "key": "tab_home_commitments",
-            "label": "6. Commitments",
+            "key": "tab_home_promotions",
+            "label": "6. Khuyến mãi",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -776,9 +725,9 @@
             "selected": 0
         },
         {
-            "key": "field_home_6_title",
-            "label": "Title",
-            "name": "home_6_title",
+            "key": "field_home_promotion_title",
+            "label": "Tiêu đề",
+            "name": "home_promotion_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -789,104 +738,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Cam kết từ NYN",
+            "default_value": "Khuyến mãi đang diễn ra",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_home_6_items",
-            "label": "Commitments List",
-            "name": "home_6_items",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "max": 4,
-            "min": 0,
-            "rows_per_page": 20,
-            "button_label": "Add Row",
-            "collapsed": "",
-            "sub_fields": [
-                {
-                    "key": "field_h6_icon",
-                    "label": "Icon",
-                    "name": "icon",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "parent_repeater": "field_home_6_items"
-                },
-                {
-                    "key": "field_h6_item_title",
-                    "label": "Title",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_home_6_items"
-                }
-            ]
-        },
-        {
-            "key": "tab_home_connect",
-            "label": "7. Connect",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_home_7_image",
-            "label": "Main Image",
-            "name": "home_7_image",
+            "key": "field_home_promotion_image",
+            "label": "Hình ảnh bên trái",
+            "name": "home_promotion_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -909,110 +770,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_home_7_heading",
-            "label": "Heading",
-            "name": "home_7_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Kết nối cùng NYN",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_home_7_desc",
-            "label": "Description",
-            "name": "home_7_desc",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
-            "key": "field_home_7_quote",
-            "label": "Quote\/Bottom Heading",
-            "name": "home_7_quote",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "NYN tin vào sự kết nối –  không đại trà, mà có chọn lọc.",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_home_7_support_title",
-            "label": "Support Title",
-            "name": "home_7_support_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Cần hỗ trợ thêm?",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_home_7_support_sub",
-            "label": "Support Sub-title",
-            "name": "home_7_support_sub",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Team NYN luôn sẵn sàng lắng nghe và tư vấn.",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_home_7_contacts",
-            "label": "Contact Items",
-            "name": "home_7_contacts",
+            "key": "field_home_promotion_slider",
+            "label": "Slide nội dung khuyến mãi",
+            "name": "home_promotion_slider",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -1023,17 +783,164 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "row",
+            "button_label": "Thêm Slide",
             "min": 0,
             "max": 0,
             "rows_per_page": 20,
-            "button_label": "Add Row",
             "collapsed": "",
             "sub_fields": [
                 {
-                    "key": "field_h7_label",
-                    "label": "Label",
-                    "name": "label",
+                    "key": "field_home_prom_title",
+                    "label": "Tiêu đề khuyến mãi",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placeholder": "VD: Mua 1 tặng 1",
+                    "default_value": "",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_home_promotion_slider"
+                },
+                {
+                    "key": "field_home_prom_desc",
+                    "label": "Mô tả",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_home_promotion_slider"
+                },
+                {
+                    "key": "field_696ee8d4e1dbd",
+                    "label": "Liên kết",
+                    "name": "button_promotion",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_home_promotion_slider"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_commitments",
+            "label": "7. Cam kết",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_home_6_title",
+            "label": "Tiêu đề",
+            "name": "home_6_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Cam kết từ NYN",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_home_6_items",
+            "label": "Danh sách cam kết",
+            "name": "home_6_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "Thêm cam kết",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "key": "field_h6_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": "",
+                    "parent_repeater": "field_home_6_items"
+                },
+                {
+                    "key": "field_h6_item_title",
+                    "label": "Tiêu đề",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -1049,14 +956,50 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_home_7_contacts"
-                },
+                    "parent_repeater": "field_home_6_items"
+                }
+            ]
+        },
+        {
+            "key": "tab_home_connect",
+            "label": "8. Kết nối",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_696eed7dde4c2",
+            "label": "Nhóm nội dung trái",
+            "name": "gr_content_left",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
                 {
-                    "key": "field_h7_type",
-                    "label": "Type",
-                    "name": "type",
+                    "key": "field_home_7_heading",
+                    "label": "Tiêu đề (Trái)",
+                    "name": "home_7_heading",
                     "aria-label": "",
-                    "type": "select",
+                    "type": "text",
                     "instructions": "",
                     "required": false,
                     "conditional_logic": false,
@@ -1065,61 +1008,39 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "messenger": "Messenger (Icon)",
-                        "text": "Text\/Link"
-                    },
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "default_value": false,
-                    "ui": 0,
-                    "ajax": 0,
+                    "default_value": "Kết nối cùng NYN",
+                    "maxlength": "",
                     "placeholder": "",
-                    "return_format": "value",
-                    "create_options": 0,
-                    "save_options": 0,
-                    "parent_repeater": "field_home_7_contacts"
+                    "prepend": "",
+                    "append": ""
                 },
                 {
-                    "key": "field_h7_icon",
-                    "label": "Messenger Icon",
-                    "name": "icon",
+                    "key": "field_home_7_desc",
+                    "label": "Mô tả (Trái)",
+                    "name": "home_7_desc",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "wysiwyg",
                     "instructions": "",
-                    "required": false,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_h7_type",
-                                "operator": "==",
-                                "value": "messenger"
-                            }
-                        ]
-                    ],
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "parent_repeater": "field_home_7_contacts"
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
-                    "key": "field_h7_link",
-                    "label": "Link\/Value",
-                    "name": "link",
+                    "key": "field_home_7_quote",
+                    "label": "Quote\/Text (Trái)",
+                    "name": "home_7_quote",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "text",
                     "instructions": "",
                     "required": false,
                     "conditional_logic": false,
@@ -1128,8 +1049,243 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "parent_repeater": "field_home_7_contacts"
+                    "default_value": "NYN tin vào sự kết nối – không đại trà, mà có chọn lọc.",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_home_7_contacts",
+                    "label": "Các liên kết (Trái)",
+                    "name": "home_7_contacts",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "button_label": "Thêm liên kết",
+                    "min": 0,
+                    "max": 0,
+                    "rows_per_page": 20,
+                    "collapsed": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_696eec5a19469",
+                            "label": "Icon",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Fontawesome",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "location-dot": "Location",
+                                "envelope": "Mail",
+                                "earth-americas": "Earth",
+                                "facebook": "Facebook",
+                                "youtube": "YouTube",
+                                "tiktok": "TikTok",
+                                "linkedin": "LinkedIn",
+                                "instagram": "Instagram",
+                                "twitter": "Twitter (X)"
+                            },
+                            "default_value": "facebook",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "allow_in_bindings": 1,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "create_options": 0,
+                            "save_options": 0,
+                            "parent_repeater": "field_home_7_contacts"
+                        },
+                        {
+                            "key": "field_h7_link",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_home_7_contacts"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_696eedcfde4c3",
+            "label": "Nhóm nội dung phải",
+            "name": "gr_content_right",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_home_8_heading_right",
+                    "label": "Tiêu đề (Phải)",
+                    "name": "home_8_heading_right",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Kết nối cùng NYN",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_home_8_desc_right",
+                    "label": "Mô tả (Phải)",
+                    "name": "home_8_desc_right",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Team NYN luôn sẵn sàng lắng nghe và tư vấn",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_home_8_time",
+                    "label": "Thời gian hỗ trợ",
+                    "name": "home_8_time_right",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Thứ 2 – CN: 8:00 - 21:00",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_home_8_contacts_right",
+                    "label": "Các liên kết (Phải)",
+                    "name": "home_8_contacts_right",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "button_label": "Thêm liên kết",
+                    "min": 0,
+                    "max": 0,
+                    "rows_per_page": 20,
+                    "collapsed": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_h8_icon",
+                            "label": "Icon",
+                            "name": "icon",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "Fontawesome",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "location-dot": "Location",
+                                "envelope": "Mail",
+                                "earth-americas": "Earth",
+                                "facebook": "Facebook",
+                                "youtube": "YouTube",
+                                "tiktok": "TikTok",
+                                "linkedin": "LinkedIn",
+                                "instagram": "Instagram",
+                                "twitter": "Twitter (X)"
+                            },
+                            "default_value": "facebook",
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_home_8_contacts_right",
+                            "create_options": 0,
+                            "save_options": 0
+                        },
+                        {
+                            "key": "field_h8_link",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": false,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_home_8_contacts_right"
+                        }
+                    ]
                 }
             ]
         }
@@ -1152,5 +1308,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1768815020
+    "modified": 1768880166
 }

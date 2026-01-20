@@ -2,10 +2,10 @@
     <footer class="footer bg-Utility-100">
         <div class="footer-top xl:py-16 py-10">
             <div class="container">
-                <div class="footer-wrapper grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-base">
+                <div class="footer-wrapper grid lg:grid-cols-[4fr_1.4fr_3.5fr_2.6fr] md:grid-cols-2 grid-cols-1 gap-base">
                     <div class="footer-column">
-                        <div class="footer-logo rem:w-[258px]">
-                            <a class="img-ratio ratio:pt-[78_258]" href="<?php echo home_url(); ?>">
+                        <div class="footer-logo rem:w-[358px] mb-12">
+                            <a class="img-ratio ratio:pt-[108_358]" href="<?php echo home_url(); ?>">
                                 <?php 
                                 $footer_logo = get_field('footer_logo', 'options');
                                 if ($footer_logo) : ?>
@@ -15,12 +15,12 @@
                                 <?php endif; ?>
                             </a>
                         </div>
-                        <div class="footer-slogan heading-4 font-normal font-secondary mt-4">
+                        <div class="footer-slogan body-2 font-bold font-secondary rem:h-[52px] bg-Utility-Black px-6 inline-flex items-center justify-center text-white">
                             <p><?php echo get_field('footer_slogan', 'options') ?: 'Lối sống là dấu ấn cá nhân.'; ?></p>
                         </div>
                     </div>
                     <div class="footer-column">
-                        <h3 class="title heading-5 font-medium font-secondary mb-4"><?php echo get_field('footer_col_2_title', 'options') ?: 'Liên hệ'; ?></h3>
+                        <h3 class="title heading-5 font-secondary mb-4 font-bold"><?php echo get_field('footer_col_2_title', 'options') ?: 'Liên hệ'; ?></h3>
                         <?php 
                         wp_nav_menu(array(
                             'theme_location' => 'footer-menu-1',
@@ -30,7 +30,7 @@
                         ?>
                     </div>
                     <div class="footer-column">
-                        <h3 class="title heading-5 font-medium font-secondary mb-4"><?php echo get_field('footer_col_3_title', 'options') ?: 'Liên hệ'; ?></h3>
+                        <h3 class="title heading-5 font-bold font-secondary mb-4"><?php echo get_field('footer_col_3_title', 'options') ?: 'Liên hệ'; ?></h3>
                         <?php 
                         wp_nav_menu(array(
                             'theme_location' => 'footer-menu-2',
@@ -40,18 +40,17 @@
                         ?>
                     </div>
                     <div class="footer-column">
-                        <h3 class="title heading-5 font-medium font-secondary mb-4"><?php echo get_field('footer_col_4_title', 'options') ?: 'Liên hệ'; ?></h3>
-                        <div class="cta font-normal">
+                        <h3 class="title heading-5 font-bold font-secondary mb-4"><?php echo get_field('footer_col_4_title', 'options') ?: 'Liên hệ'; ?></h3>
+                        <div class="cta font-normal body-2 font-secondary">
                             <p><?php echo get_field('footer_col_4_desc', 'options') ?: 'Cùng NYN xây dựng một cộng đồng đề cao chất lượng, trải nghiệm được chọn lọc và cảm hứng sống hiện đại.'; ?></p>
                         </div>
                         <div class="footer-social xl:mt-12 mt-6">
-                            <div class="label heading-5 font-medium font-secondary mb-6">Theo dõi chúng tôi:</div>
+                            <div class="label heading-5 font-bold font-secondary mb-6">Theo dõi chúng tôi:</div>
                             <ul class="footer-social-menu">
                                 <?php if (have_rows('footer_socials', 'options')) : ?>
                                     <?php while (have_rows('footer_socials', 'options')) : the_row(); 
                                         $link = get_sub_field('link');
                                         $icon = get_sub_field('icon');
-                                        // Social icons are typically brands
                                         $icon_class = (strpos($icon, 'fa-') === 0) ? $icon : 'fa-' . $icon;
                                         ?>
                                         <li> 
@@ -72,11 +71,11 @@
                 </div>
             </div>
         </div>
-        <div class="footer-bottom  bg-Utility-Black py-5 ">
+        <div class="footer-bottom py-5 border-t border-t-Utility-200 bg-Utility-100">
             <div class="container">
-                <div class="footer-bottom-wrapper flex items-center justify-between md:flex-row flex-col text-white/65 body-4">
+                <div class="footer-bottom-wrapper flex items-center justify-between md:flex-row flex-col text-Utility-Black body-4 font-secondary">
                     <div class="footer-copyright font-light md:text-left text-center">
-                        <p><?php echo get_field('footer_copyright', 'options') ?: 'Copyright © 2025 Bản quyền thuộc về Công ty TNHH MTV Bảo Hiểm Bảo Việt.'; ?></p>
+                        <p><?php echo get_field('footer_copyright', 'options') ?: 'Copyright © 2025 Bản quyền thuộc về NYN.'; ?></p>
                     </div>
                     <div class="footer-policy">
                         <?php 

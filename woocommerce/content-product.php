@@ -41,13 +41,13 @@ if (empty($sku)) {
     $sku = $product->get_sku();
 }
 
-// Logic for custom AOS if passed from template
-$aos_delay = isset($args['aos_delay']) ? $args['aos_delay'] : 0;
+// Logic for custom AOS from global
+$aos_delay = isset($GLOBALS['nyn_aos_delay']) ? $GLOBALS['nyn_aos_delay'] : 0;
 ?>
 
 <div <?php wc_product_class('product-item', $product); ?> data-aos="fade-left" data-aos-delay="<?php echo esc_attr($aos_delay); ?>" data-aos-duration="1000">
     <div class="img"> 
-        <a class="img-ratio ratio:pt-[358_320] zoom-img" href="<?php echo get_permalink($product_id); ?>">
+        <a class="img-ratio ratio:pt-[420_320] zoom-img" href="<?php echo get_permalink($product_id); ?>">
             <?php if (has_post_thumbnail($product_id)) : ?>
                 <img class="lozad" data-src="<?php echo get_the_post_thumbnail_url($product_id, 'full'); ?>" alt="<?php the_title_attribute(); ?>" />
             <?php else : ?>
@@ -56,7 +56,7 @@ $aos_delay = isset($args['aos_delay']) ? $args['aos_delay'] : 0;
         </a>
     </div>
     <div class="content mt-5">
-        <h3 class="title body-2 font-medium font-secondary mb-4"> 
+        <h3 class="title body-2 font-bold font-secondary mb-4"> 
             <a href="<?php echo get_permalink($product_id); ?>">
                 <?php echo $product->get_name(); ?>
             </a>
@@ -66,12 +66,12 @@ $aos_delay = isset($args['aos_delay']) ? $args['aos_delay'] : 0;
             <div class="sku hidden"><?php echo esc_html($sku); ?></div>
         <?php endif; ?>
 
-        <div class="wrap-price flex items-center gap-2 mb-4">
+        <div class="wrap-price font-secondary flex items-center gap-2 mb-4">
             <?php if ( $product->is_on_sale() ) : ?>
-                <span class="price-new body-1 font-bold"><?php echo wc_price( $product->get_sale_price() ); ?></span>
-                <span class="price-old font-normal text-Utility-500 line-through"><?php echo wc_price( $product->get_regular_price() ); ?></span>
+                <span class="price-new body-2 font-secondary font-bold"><?php echo wc_price( $product->get_sale_price() ); ?></span>
+                <span class="price-old font-bold body-1 font-secondary text-Utility-500 line-through"><?php echo wc_price( $product->get_regular_price() ); ?></span>
             <?php else : ?>
-                <span class="price-new body-1 font-bold"><?php echo $product->get_price_html(); ?></span>
+                <span class="price-new body-2 font-secondary font-bold"><?php echo $product->get_price_html(); ?></span>
             <?php endif; ?>
         </div>
         
