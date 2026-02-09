@@ -137,3 +137,16 @@ body.login {
 #login a:hover {
 	color: var(--main) !important;
 }
+
+.product-detail-quantity {
+	display: none !important;
+}
+
+#login h1 a,
+.login h1 a {
+	background-image: url(https://nyn.webcanhcam.vn/wp-content/themes/canhcamtheme-woo/img/logo-nyn.png);
+	min-height: 80px;
+	width: 246px;
+	background-size: 246px auto;
+	background-repeat: no-repeat;
+}

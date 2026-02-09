@@ -201,7 +201,7 @@ function woo_add_buy_now_button()
 ?>
 	<button type="button" class="product-buy-now btn btn-primary solid flex-center lowercase w-full buy_now_button">
 		<span><?= __('Buy now', 'woocommerce') ?></span>
-		<i class="fa-regular fa-paper-plane-top"></i>
+		<!-- <i class="fa-regular fa-paper-plane-top"></i> -->
 	</button>
 	<script>
 		jQuery(document).ready(function($) {

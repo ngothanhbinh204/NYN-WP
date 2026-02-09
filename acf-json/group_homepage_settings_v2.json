@@ -363,26 +363,6 @@
             "selected": 0
         },
         {
-            "key": "field_home_3_main_title",
-            "label": "Tiêu đề Section",
-            "name": "home_3_main_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "NOTICE YOUR NEEDS",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_home_3_sections",
             "label": "Danh sách mục nổi bật",
             "name": "home_3_sections",
@@ -456,20 +436,21 @@
                     "label": "Mô tả",
                     "name": "description",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "rows": 3,
-                    "placeholder": "Nhập mô tả ngắn",
                     "default_value": "",
-                    "new_lines": "",
-                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
                     "parent_repeater": "field_home_3_sections"
                 },
                 {
@@ -1092,7 +1073,9 @@
                             },
                             "choices": {
                                 "location-dot": "Location",
+                                "phone": "Phone",
                                 "envelope": "Mail",
+                                "facebook-messenger": "Messenger",
                                 "earth-americas": "Earth",
                                 "facebook": "Facebook",
                                 "youtube": "YouTube",
@@ -1248,7 +1231,9 @@
                             },
                             "choices": {
                                 "location-dot": "Location",
+                                "phone": "Phone",
                                 "envelope": "Mail",
+                                "facebook-messenger": "Messenger",
                                 "earth-americas": "Earth",
                                 "facebook": "Facebook",
                                 "youtube": "YouTube",
@@ -1261,12 +1246,13 @@
                             "return_format": "value",
                             "multiple": 0,
                             "allow_null": 0,
+                            "allow_in_bindings": 1,
                             "ui": 0,
                             "ajax": 0,
                             "placeholder": "",
-                            "parent_repeater": "field_home_8_contacts_right",
                             "create_options": 0,
-                            "save_options": 0
+                            "save_options": 0,
+                            "parent_repeater": "field_home_8_contacts_right"
                         },
                         {
                             "key": "field_h8_link",
@@ -1308,5 +1294,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1768880166
+    "modified": 1770259892
 }

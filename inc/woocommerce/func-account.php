@@ -1123,11 +1123,39 @@ add_action('wp', 'canhcam_registration_success_message');
  * @since 1.0.0
  * @return void
  */
-function canhcam_add_account_container()
-{
-	echo '<div class="container wrap-grid-account">';
+function canhcam_add_account_container() {
+    ?>
+
+    <!-- ===== BREADCRUMB (FULL WIDTH) ===== -->
+    <div class="global-breadcrumb">
+        <div class="container">
+            <?php
+            if (function_exists('rank_math_the_breadcrumbs')) {
+
+                rank_math_the_breadcrumbs();
+
+            } elseif (function_exists('yoast_breadcrumb')) {
+
+                yoast_breadcrumb(
+                    '<nav class="yoast-breadcrumbs" aria-label="Breadcrumbs">',
+                    '</nav>'
+                );
+
+            } elseif (function_exists('woocommerce_breadcrumb')) {
+
+                woocommerce_breadcrumb();
+            }
+            ?>
+        </div>
+    </div>
+
+    <!-- ===== ACCOUNT GRID WRAPPER ===== -->
+    <div class="container wrap-grid-account">
+
+    <?php
 }
 add_action('woocommerce_before_account_navigation', 'canhcam_add_account_container', 1);
+
 
 // =============================================================================
 // ACCOUNT CUSTOMIZATION & DISPLAY

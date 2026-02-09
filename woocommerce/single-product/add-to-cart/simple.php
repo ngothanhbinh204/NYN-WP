@@ -44,9 +44,13 @@ if ($product->is_in_stock()) : ?>
 		do_action('woocommerce_after_add_to_cart_quantity');
 		?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
+		<div class="wrapper-add-to-cart flex flex-wrap md:flex-row flex-col md:items-center gap-5">
+			<?php do_action('woocommerce_after_add_to_cart_button'); ?>
+			<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>">
+				<div class="icon"><i class="fa-regular fa-cart-circle-plus"></i></div>
+			</button>
+		</div>
 
-		<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 	</form>
 
 	<?php do_action('woocommerce_after_add_to_cart_form'); ?>

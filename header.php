@@ -53,26 +53,44 @@
                             'container'      => false,
                             'menu_class'     => 'header-nav',
                             'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                            'walker'         => new Header_Menu_Walker(), // Use the clean walker
+                            'walker'         => new Header_Menu_Walker(), // Use the custom walker
                         )); 
                         ?>
                         
                     </div>
                 </div>
                 <div class="header-logo">
-                    <a href="<?php echo home_url(); ?>" alt="<?php bloginfo('name'); ?>"> 
-                        <?php 
-                        $logo_id = get_theme_mod( 'custom_logo' );
-                        $logo = wp_get_attachment_image_src( $logo_id , 'full' );
-                        if ( has_custom_logo() ) {
-                            echo '<img class="logo-default" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
-                            echo '<img class="logo-active" src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">'; 
-                        } else {
-                            echo '<img class="logo-default" src="' . get_template_directory_uri() . '/template-woocommerce/img/logo-white.png" alt="logo">';
-                            echo '<img class="logo-active" src="' . get_template_directory_uri() . '/template-woocommerce/img/logo-black.png" alt="logo">';
-                        }
+                   <?php
+                        $site_name      = get_bloginfo('name');
+
+                        // 1. Logo từ ACF (Options Page)
+                        $logo_white     = get_field('logo_white', 'option');
+                        $logo_white_url = is_array($logo_white) ? $logo_white['url'] : '';
+
+                        $footer_logo    = get_field('footer_logo', 'option');
+                        $footer_logo_url = is_array($footer_logo) ? $footer_logo['url'] : '';
+
+                    
+
+                        // === CHỌN LOGO ===
+                        // logo_white -> Default (Scroll top)
+                        // footer_logo -> Active (Scroll down)
+                        $logo_default = $logo_white_url;
+                        $logo_active  = $footer_logo_url;
                         ?>
-                    </a>
+
+                        <a href="<?php echo esc_url( home_url('/') ); ?>" alt="logo">
+
+                            <img class="logo-default"
+                                src="<?php echo esc_url($logo_default); ?>"
+                                alt="<?php echo esc_attr($site_name); ?>">
+
+                            <img class="logo-active"
+                                src="<?php echo esc_url($logo_active); ?>"
+                                alt="<?php echo esc_attr($site_name); ?>">
+
+                        </a>
+
                 </div>
                 <div class="header-right">
                     <div class="header-right-inner">
@@ -80,30 +98,33 @@
                             <div class="header-search">
                                 <i class="fa-light fa-magnifying-glass"></i>
                             </div>
-                           <div class="header-language"> 
-									<div class="header-language-active">
-										<ul> 
-											<li class="wpml-ls-current-language"><a href=""> <span class="wpml-ls-native">VN</span></a></li>
-											<ul> 
-												<li> <a href=""> <span>EN</span></a></li>
-											</ul>
-										</ul>
-									</div>
-									<div class="header-language-list">
-										<ul> 
-											<li class="wpml-ls-current-language"><a href=""> <span class="wpml-ls-native">VN</span></a></li>
-											<ul> 
-												<li> <a href=""> <span>EN</span></a></li>
-											</ul>
-										</ul>
-									</div>
-								</div>
+                            <!-- Language Switcher PlaceHolder or WPML -->
+                            <div class="header-language">
+                                <div class="header-language-active">
+                                    <ul>
+                                        <li class="wpml-ls-current-language"><a href=""> <span class="wpml-ls-native">VN</span></a></li>
+                                        <ul>
+                                            <li> <a href=""> <span>EN</span></a></li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="header-language-list">
+                                    <ul>
+                                        <li class="wpml-ls-current-language"><a href=""> <span class="wpml-ls-native">VN</span></a></li>
+                                        <ul>
+                                            <li> <a href=""> <span>EN</span></a></li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+
                             <div class="header-user"> 
                                 <a href="<?php echo get_permalink(get_option('woocommerce_myaccount_page_id')); ?>"><i class="fa-light fa-user"></i></a>
                             </div>
                             <div class="header-cart"> 
                                 <a href="<?php echo wc_get_cart_url(); ?>">
                                     <i class="fa-light fa-bag-shopping"></i>
+                                    <!-- Dynamic Cart Count -->
                                     <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
                                         <span class="count"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
                                     <?php endif; ?>
@@ -121,24 +142,17 @@
         </div>
     </header>
     <div class="header-overlay"></div>
-
-    <style>
-        .productsearchbox form {
-            display: flex;
-            position: relative;
-            flex-wrap: wrap;
-            width: 100%;
-        }
-    </style>
     <div class="header-search-form">
-        <div class="close flex items-center justify-center absolute top-0 right-0 bg-white text-3xl cursor-pointer w-12.5 h-12.5">
-            <i class="fa-light fa-xmark"></i></div>
+        <div
+            class="close flex items-center justify-center absolute top-0 right-0 bg-white text-3xl cursor-pointer w-12.5 h-12.5">
+            <i class="fa-light fa-xmark"></i>
+        </div>
         <div class="container">
             <div class="wrap-form-search-product">
                 <div class="productsearchbox">
                     <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-                        <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Tìm kiếm thông tin', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" />
-                        <button type="submit" class="search-submit"><i class="fa-light fa-magnifying-glass"></i></button>
+                        <input type="text" placeholder="<?php echo esc_attr_x( 'Tìm kiếm thông tin', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" />
+                        <button type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
                     </form>
                 </div>
             </div>

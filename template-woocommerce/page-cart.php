@@ -2,6 +2,19 @@
 Template name: Page - Giỏ hàng
 */ ?>
 <?php get_header() ?>
+<div class="global-breadcrumb">
+			<div class="container">
+				<?php 
+				if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<nav class="rank-math-breadcrumb" aria-label="breadcrumbs">','</nav>' );
+				} elseif ( function_exists('rank_math_the_breadcrumbs') ) {
+					rank_math_the_breadcrumbs();
+				} else {
+					woocommerce_breadcrumb();
+				}
+				?>
+			</div>
+		</div>
 <section class="section-cart-overview section-py">
 	<div class="container">
 		<?php the_content() ?>

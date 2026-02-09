@@ -286,3 +286,18 @@
 .section-cart-overview .woocommerce-notices-wrapper .woocommerce-error {
     display: none;
 }
+
+
+.product-wrap-buy .product-detail-quantity {
+    display: none;
+}
+
+/* .product-wrap-buy {
+    display: flex;
+    flex-direction: row-reverse !important;
+    flex-wrap: nowrap;
+} */
+
+.product-wrap-buy .buy_now_button {
+    width: fit-content;
+}
